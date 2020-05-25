@@ -21,6 +21,11 @@ class Address(models.Model):
     postcode = models.CharField(max_length=64, default="")
     country = CountryField(null=True, default=None)
 
+    picture = models.ImageField(
+        upload_to="addresses/images/",
+        null=True,
+        default=None)
+
     owner = models.ForeignKey(User,
         on_delete=models.CASCADE,
         related_name="addresses")
