@@ -24,4 +24,4 @@ docker-compose run --rm app ./manage.py createsuperuser
 docker-compose up
 ```
 
-The application will now be up and running at [http://localhost:8000/](http://localhost:8000/).
+The application will now be up and running at [http://localhost:8000/admin](http://localhost:8000/admin).
