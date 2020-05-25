@@ -2,10 +2,10 @@ FROM python:3.8
 
 WORKDIR /app
 
-# Shell Tools
+# Shell/Ops Tools
 RUN apt-get update && \
-    apt-get install bash vim nano postgresql-client
-RUN pip install --no-cache-dir flake8
+    apt-get install -y bash vim nano postgresql-client
+RUN pip install --no-cache-dir flake8 "uWSGI<2.1"
 
 
 # Install Python dependencies
@@ -22,6 +22,7 @@ ARG DB_NAME=
 ARG DB_USER=
 ARG DB_PASSWORD=
 ARG REDIS_URL=
+ARG AWS_S3_REGION_NAME=
 ARG AWS_ACCESS_KEY_ID=
 ARG AWS_SECRET_ACCESS_KEY=
 ARG AWS_STORAGE_BUCKET_NAME=
