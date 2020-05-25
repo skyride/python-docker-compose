@@ -2,6 +2,8 @@
 
 This simple django app serves as an example docker environment for a blog post.
 
+It has address book fields you can fill in in the admin panel.
+
 
 ## Set up
 
