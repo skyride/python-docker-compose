@@ -12,9 +12,8 @@ Run the following commands to build the project.
 ```
 git clone https://github.com/skyride/python-docker-compose
 cd python-docker-compose
-docker-compose pull
-docker-compose build
 cp example.env .env
+docker-compose build
 ```
 
 Now populate `.env` with secrets, then run the following. You will be prompted
